@@ -3,29 +3,8 @@ import {AssetsService} from './assets.service';
 
 @Component({
   selector: 'assets',
-  template: `
-    <h2>{{title}}</h2>
-    <table class="table table-bordered table-hover table-striped">
-      <thead>
-      <th>Name</th>
-      <th>Serial Num</th>
-      <th>Type</th>
-      <th>Ram</th>
-      <th>Warranty Exp</th>
-      <th>Cost</th>
-      </thead>
-      <tbody>
-      <tr *ngFor="let asset of assets">
-        <td>{{ asset.name | uppercase }}</td>
-        <td>{{ asset.serialNum | uppercase }}</td>
-        <td>{{ asset.type }}</td>
-        <td>{{ asset.ram }}</td>
-        <td>{{ asset.warrantyExp | date:'shortDate' }}</td>
-        <td>{{ asset.cost | currency:'USD'}}</td>
-      </tr>
-      </tbody>
-    </table>
-  `
+  templateUrl: './assets.component.html',
+  styleUrls: ['./assets.component.css']
 })
 export class AssetsComponent {
   title = 'List of assets';
