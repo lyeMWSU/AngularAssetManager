@@ -1,0 +1,25 @@
+<div style="padding: 20px;">
+  <h2>{{title}}</h2>
+  <div class="table-responsive-md">
+    <table class="table table-bordered table-hover table-striped table-default">
+      <thead>
+      <th>Name</th>
+      <th>Serial Num</th>
+      <th>Type</th>
+      <th>Ram</th>
+      <th>Warranty Exp</th>
+      <th>Cost</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let asset of assets">
+        <td>{{ asset.name | uppercase }}</td>
+        <td>{{ asset.serialNum | uppercase }}</td>
+        <td>{{ asset.type }}</td>
+        <td>{{ asset.ram }}</td>
+        <td>{{ asset.warrantyExp | date:'shortDate' }}</td>
+        <td>{{ asset.cost | currency:'USD'}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>

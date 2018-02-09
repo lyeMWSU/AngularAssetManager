@@ -7,7 +7,7 @@ import {AssetsService} from './assets.service';
   styleUrls: ['./assets.component.css']
 })
 export class AssetsComponent {
-  title = 'List of assets';
+  title = 'BadASSet\'s List';
   private asset: { name: string; serialNum: string; type: string; ram: string; cost: number; warrantyExp: Date };
   assets = [
     this.asset = {
@@ -46,7 +46,4 @@ export class AssetsComponent {
 
   constructor(service: AssetsService) {
   }
-
-  //logic for calling an HTTP service
-
 }
