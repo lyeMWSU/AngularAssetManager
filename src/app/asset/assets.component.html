@@ -1,6 +1,13 @@
 <div style="padding: 20px;">
   <h2>{{title}}</h2>
-  <div class="table-responsive-md">
+  <div class="container-fluid row">
+  <div class="col-sm-4 table-bordered table-dark">
+    <b>ManagerTools</b>
+    <p>Placeholder for managerTools Component.\nThis will allow for us to filter assets by location, type, expiration, processor etc.</p>
+    <p>This will probably be the most important part of the application to get right.</p>
+    <p>It should also allow to print reports.</p>
+  </div>
+  <div class="table-responsive-md col-sm-8" id="assetTable">
     <table class="table table-bordered table-hover table-striped table-default">
       <thead>
       <th></th>
@@ -12,21 +19,23 @@
       <th>Cost</th>
       </thead>
       <tbody>
-      <tr *ngFor="let asset of assets">
+      <tr *ngFor="let asset of assets; let i = index" (click)="setClickedRow(i)"[class.active]="i == selectedRow">
         <td>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              drop
-            </button>
-            <div class="dropdown-menu dropdown-menu-right">
+
+
+          <div class="dropdown show">
+            <a class="btn btn-outline-secondary dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Action
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="#">Action</a>
               <a class="dropdown-item" href="#">Another action</a>
               <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
             </div>
           </div>
+
+
+
         </td>
         <td>{{ asset.name | uppercase }}</td>
         <td>{{ asset.serialNum | uppercase }}</td>
@@ -38,4 +47,5 @@
       </tbody>
     </table>
   </div>
+</div>
 </div>
