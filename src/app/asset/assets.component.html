@@ -3,6 +3,7 @@
   <div class="table-responsive-md">
     <table class="table table-bordered table-hover table-striped table-default">
       <thead>
+      <th></th>
       <th>Name</th>
       <th>Serial Num</th>
       <th>Type</th>
@@ -12,6 +13,21 @@
       </thead>
       <tbody>
       <tr *ngFor="let asset of assets">
+        <td>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              drop
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
+        </td>
         <td>{{ asset.name | uppercase }}</td>
         <td>{{ asset.serialNum | uppercase }}</td>
         <td>{{ asset.type }}</td>
@@ -22,4 +38,4 @@
       </tbody>
     </table>
   </div>
-  </div>
+</div>
