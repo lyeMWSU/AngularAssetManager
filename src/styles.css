@@ -2,6 +2,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~bootstrap/dist/css/bootstrap-grid.css";
 @import "~bootstrap/dist/css/bootstrap-reboot.css";
-
+@import "~@material/animation/dist/mdc.animation.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 
